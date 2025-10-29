@@ -1,0 +1,23 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instrument-package"
+version = "1.0"
+description = "A comprehensive suite of instrument drivers."
+authors = [
+    { name = "Michael Capotosto", email = "capotosto@bnl.gov" }
+]
+license = { text = "" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    # Add any external libraries your drivers depend on (e.g., PyVISA)
+    "pyvisa==1.14.1",
+]
+
+[tool.setuptools.packages]
+# This tells setuptools to find all sub-packages under the current directory.
+find = {}
